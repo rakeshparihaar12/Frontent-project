@@ -4,186 +4,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Layout</title>
+
     <style>
         :root {
             --main-color: rgb(108, 108, 202);
             --sec-color: rgb(160, 160, 225);
-            font-weight: bolder;
-            --color: blue;
-
+            --text-color: blue;
         }
 
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-
-
 
         body {
+
             background-color: var(--sec-color);
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
         }
 
-        ol li a {
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 20px;
-            color: var(--color);
-
-        }
-
-        ol li {
-            padding-top: 10px;
-        }
+        /* ---------- NAVBAR ---------- */
 
         .list {
-            border: solid black;
+
             display: flex;
+
             list-style: none;
-            height: 40px;
+
             background-color: var(--main-color);
 
+            height: 50px;
 
+            align-items: center;
 
+            border: 2px solid black;
         }
 
-        div .firstb {
+        .list li a {
 
-            width: 300px;
-            height: 70%;
-            background-color: rgb(38, 38, 152);
+            text-decoration: none;
+
+            color: var(--text-color);
+
+            padding: 10px 20px;
+
             font-family: sans-serif;
-            font-size: 20px;
 
-        }
-
-        div .secondb {
-
-            width: 300px;
-            height: 70%;
-            background-color: rgb(18, 113, 150);
-            font-family: sans-serif;
-            font-size: 20px;
-        }
-
-        div .maindiv {
-            display: flex;
-            gap: 200px;
-            padding-left: 65px;
-            padding-right: 45px;
-
-
-        }
-
-        div .out {
-            height: 60%;
-
-            padding-top: 20px;
-            background-color: aqua;
+            font-weight: bold;
         }
 
         header {
+
             position: sticky;
-            top: 0%;
+
+            top: 0;
+
+            z-index: 100;
         }
 
-        div .down {
-            padding-left: 30%;
-            padding-top: 2%;
-            margin: 20px;
+        /* ---------- MAIN SECTION ---------- */
 
+        .maindiv {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+
+            padding: 30px;
+
+            flex-wrap: wrap;
+
+            background-color: aqua;
+
+            flex: 1;
+        }
+
+        .firstb,
+        .secondb {
+
+            width: 300px;
+
+            min-height: 333px;
+
+            padding: 15px;
+
+            font-family: sans-serif;
+
+            font-size: 18px;
+
+            border-radius: 10px;
+
+            color: white;
+        }
+
+        .firstb {
+            background-color: rgb(38, 38, 152);
+        }
+
+        .secondb {
+            background-color: rgb(18, 113, 150);
+        }
+
+        /* ---------- CENTER BOX ---------- */
+
+        .down {
 
             width: 80%;
-            height: 50px;
+
+            margin: 20px auto;
+
+            height: 70px;
+
             background-color: cornflowerblue;
+
             border-radius: 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
             font-family: sans-serif;
+
             font-size: 20px;
+
+            font-weight: bold;
+
+            text-align: center;
         }
 
-        div .pic {
-    position: fixed;
+        /* ---------- FOOTER ---------- */
 
-    bottom: 0px;
+        .foot {
 
-    right: 0px;
-
-    width: 80px;
-
-    height: 80px;
-
-    border-radius: 50%;
-
-    overflow: hidden;
-
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            margin-top: auto;
         }
 
-        img {
+        footer .list {
+
+            justify-content: center;
+        }
+
+        /* ---------- FIXED IMAGE ---------- */
+
+        .pic {
+
+            position: fixed;
+
+            bottom: 20px;
+
+            right: 20px;
+
+            width: 80px;
+
+            height: 80px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .pic img {
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
         }
     </style>
 </head>
 
-<div>
+<body>
+
+    <!-- HEADER -->
+
     <header>
         <nav>
             <ol class="list">
+
                 <li><a href="/">Home</a></li>
-                <li><a href="/">Contect</a></li>
-                <li><a href="/">About us</a></li>
+
+                <li><a href="/">Contact</a></li>
+
+                <li><a href="/">About Us</a></li>
+
                 <li><a href="/">Main</a></li>
 
             </ol>
         </nav>
     </header>
-    <div class="out">
-        <div class="maindiv">
-            <div class="firstb">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed distinctio voluptate repellendus totam
-                    nisi similique debitis fugit neque. Repellat deserunt, ipsa neque culpa totam praesentium animi
-                    quaerat eligendi, tenetur eum, obcaecati vel beatae repudiandae voluptate voluptatum provident! Nam
-                    corrupti iusto dolorem libero eveniet esse, odio quam! Aliquam, officiis? Iure, temporibus. Quam
-                    quibusdam fuga fugit dolor accusantium culpa veritatis minima voluptate ea architecto non minus
-                    illum quo consequuntur perspiciatis corporis, nemo quaerat porro est. At mollitia, dolores culpa
-                    nobis nemo fugit, quos aliquid aperiam perferendis dicta voluptatibus eligendi fugiat debitis
-                    excepturi temporibus reiciendis omnis accusamus veritatis quibusdam. Tempora odit consequuntur
-                    reiciendis!</p>
 
-            </div>
-            <div class="secondb">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde ratione eveniet quo veniam vitae
-                    perspiciatis iure expedita cupiditate quasi incidunt officia doloremque excepturi, debitis explicabo
-                    autem, veritatis architecto. Tempore, consequuntur? Autem deserunt perferendis nobis, sapiente est
-                    veniam animi? Debitis blanditiis quae dolore ipsam ullam vitae praesentium assumenda error nemo,
-                    nihil corporis. Ex cumque, sequi illo, consequatur laborum odio iure incidunt quae sapiente atque in
-                    saepe voluptate quia fugit. Aliquam in sint soluta quod nam, quis dolo hbshwdjb wde wr repudiandae
-                    minima, perferendis quia veritatis vel, odio unde eligendi accusantium quidem architecto? Recusandae
-                    est adipisci praesentium blanditiis repudiandae consequatur sunt tempore modi culpa aperiam.</p>
+    <!-- MAIN CONTENT -->
 
-            </div>
+    <div class="maindiv">
+
+        <div class="firstb">
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus voluptatem consequatur debitis saepe.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
 
         </div>
+
+        <div class="secondb">
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Unde ratione eveniet quo veniam vitae perspiciatis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+        </div>
+
     </div>
+
+    <!-- CENTER TEXT BOX -->
+
     <div class="down">
-        <p>A simple statick navbar with a fixed logo</p>
+
+        <p>A simple sticky navbar with a fixed circular logo</p>
+
     </div>
-    <header>
-        <nav>
+
+    <!-- FOOTER -->
+
+    <div class="foot">
+
+        <footer>
+
             <ol class="list">
+
                 <li><a href="/">Home</a></li>
-                <li><a href="/">Contect</a></li>
-                <li><a href="/">About us</a></li>
+
+                <li><a href="/">Contact</a></li>
+
+                <li><a href="/">About Us</a></li>
+
                 <li><a href="/">Main</a></li>
 
             </ol>
-        </nav>
 
-    </header>
-    <div class="pic"><img src="WhatsApp Image 2026-01-24 at 12.36.17 PM.jpeg" alt="" width="50px" ">
+        </footer>
+
+    </div>
+
+    <!-- FIXED IMAGE -->
+
+    <div class="pic">
+
+        <img src="WhatsApp Image 2026-01-24 at 12.36.17 PM.jpeg" alt="Profile">
+
+    </div>
+
 </body>
-</div>
+
 </html>
